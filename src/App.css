@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f8ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
+  height: 90%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.note-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-shrink: 0;
+}
+
+.note-form input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  margin-right: 10px;
+  outline: none;
+}
+
+.note-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+.note-form button:hover {
+  background-color: #0056b3;
+}
+
+.notes-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.note {
+  background-color: #ffebcd;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 8px;
 }
 
-.App-link {
-  color: #61dafb;
+.note-content {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #333;
+  word-wrap: break-word;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.note-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.note-actions button {
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+}
+
+.note-actions button:hover {
+  background-color: #218838;
+}
+
+.note-actions button.delete {
+  background-color: #dc3545;
+}
+
+.note-actions button.delete:hover {
+  background-color: #c82333;
 }
